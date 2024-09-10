@@ -1,0 +1,32 @@
+/* Conteneur de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid réactif */
+    gap: 20px;
+    padding: 20px;
+    margin:5px;
+   
+  }
+  
+  /* Conteneur de chaque image */
+  .gallery_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Optionnel : ajoute un effet d'ombre */
+  }
+  
+  /* Style de l'image */
+  .gallery_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition pour un effet fluide */
+  }
+  
+  /* Effet de zoom au survol */
+  .gallery_item:hover img {
+    transform: scale(1.2); /* Zoom de 20% sur l'image */
+    opacity: 0.9; /* Légère réduction de l'opacité pour un effet stylisé */
+  }
+  

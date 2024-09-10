@@ -1,0 +1,66 @@
+body {
+    padding-top: 60px; /* Ajuste en fonction de la hauteur réelle de ta navbar */
+}
+
+.home_section {
+    display: flex; /* Utilisation de Flexbox pour mettre les sections côte à côte */
+    justify-content: space-between; /* Ajoute de l'espace entre les sections */
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    padding: 20px;
+    height: 100vh; /* S'assure que la section prend toute la hauteur de la fenêtre */
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 30px;
+    border-radius: 5%;
+}
+
+
+
+.dla_home_picture {
+    flex: 1; /* Prend 50% de la largeur */
+    display: flex;
+    justify-content: center;
+}
+
+.dla_home_picture img {
+    max-width: 100%; /* Pour s'assurer que l'image s'ajuste correctement à la section */
+    height: auto;
+    border-radius: 8px; /* Optionnel : Ajoute des coins arrondis */
+}
+
+.dla_home_text {
+    flex: 1; /* Prend 50% de la largeur */
+    padding-left: 20px; /* Un peu d'espace entre l'image et le texte */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Ajoute une transition fluide */
+  }
+
+
+.dla_home_text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.home_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: auto; /* Enlève la hauteur fixe */
+    flex-direction: row; /* Utilisation de Flexbox pour la disposition horizontale */
+    padding-top: 50px;
+
+}
+
+/* Styles pour mobile */
+@media screen and (max-width: 768px) {
+    .home_section {
+        flex-direction: column; /* Change la disposition en colonne sur mobile */
+    }
+
+    .dla_home_picture, .dla_home_text {
+        width: 100%; /* Les deux sections prennent toute la largeur sur mobile */
+        margin-bottom: 20px;
+    }
+}
+

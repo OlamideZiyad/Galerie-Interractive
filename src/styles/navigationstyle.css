@@ -1,0 +1,96 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Align items vertically in the middle */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+}
+
+.navbar .logo {
+    margin-left: 20px; /* Adjust the space to the left */
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex: 1; /* Allow the links to take up remaining space */
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #747bff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    opacity: 0.5;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+.navbar h1 {
+    font-size: 20px;
+}
+
+.navbar h1:hover {
+    color: #747bff;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Caché par défaut */
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Styles pour rendre la navigation responsive */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Cache le menu sur petits écrans */
+        flex-direction: column; /* Disposition verticale du menu */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Affiche le menu en version mobile */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Affiche l'icône hamburger sur petits écrans */
+    }
+
+    .navbar ul {
+        display: none; /* Cache les liens en version mobile */
+    }
+
+    .navbar ul.active {
+        display: flex; /* Affiche les liens quand le menu est ouvert */
+        flex-direction: column;
+    }
+}
